@@ -3,6 +3,8 @@
 
 ° Projeto individual BeAcademy/PayLivre°
 
+Mentor: José Lira
+
 ⇨ CRUD em PHP;
 
 ⇨ Utilizando Laravel;
