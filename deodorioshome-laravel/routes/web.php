@@ -6,8 +6,12 @@ use App\Http\Controllers\{
     ViaCepController
 };
 
+Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
+Route::post('/user', [UserController::class, 'store'])->name('users.store');
 Route::get('/users', [UserController::class, 'index'])->name('users.index');
 Route::get('/users/{id}', [UserController::class, 'show'])->name('users.show');
+
+//VIA CEP WEB SERVICE
 
 Route::get('/viacep', [ViaCepController::class, 'index'])->name('viacep.index');
 Route::post('/viacep', [ViaCepController::class, 'index'])->name('viacep.index.post');
