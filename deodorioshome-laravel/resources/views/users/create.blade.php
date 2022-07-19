@@ -1,9 +1,18 @@
 @extends('template.users')
 @section('title', 'Novo Usuário')
 @section('body')
-<h1>Novo Usuário</h1>
-<form action="{{ route('users.store') }}" method="POST">
-    @csrf
+  <h1>Novo Usuário</h1>
+
+  @if($errors->any())
+     <div class="alert alert-danger" role="alert">
+        @foreach($errors->all() as $error)
+            {{ $error }}<br>
+        @endforeach
+     </div>
+
+    @endif
+    <form action="{{ route('users.store') }}" method="POST">
+       @csrf
     <div class="mb-3">
       <label for="name" class="form-label">Nome</label>
       <input type="text" class="form-control" id="name" name="name" aria-describedby="Nome">
