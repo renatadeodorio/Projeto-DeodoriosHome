@@ -10,6 +10,7 @@
       <th scope="col">Id</th>
       <th scope="col">Nome</th>
       <th scope="col">Email</th>
+      <th scope="col">Postagens</th>
       <th scope="col">Data Cadastro</th>
       <th scope="col">Ações</th>
      </tr>
@@ -25,6 +26,10 @@
                 <th scope="row">{{ $user->id }}</th>
              <td>{{ $user->name }}</td>
              <td>{{ $user->email }}</td>
+             <td>
+             <a href="{{ route('posts.show', $user->id) }}" class="btn btn-outline-dark">Postagens - {{ $user->posts->count() }}</a>
+
+             </td>
              <td>{{ date('d/m/Y- H:i', strtotime($user->created_at)) }}</td>
              <td><a href="{{ route('users.show', $user->id) }}" class="btn btn-primary text-white">Visualizar</a></td>
          </tr>

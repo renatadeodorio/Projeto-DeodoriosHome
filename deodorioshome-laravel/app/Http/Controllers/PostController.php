@@ -22,6 +22,16 @@ class PostController extends Controller
 
         return view('posts.index', compact('posts'));
     }
+
+    public function show($userId)
+    {
+        if(!$user = $this->user->find($userId))
+            return redirect()->back();
+
+            $posts = $user->posts()->get();
+
+            return view('posts.show', compact('user', 'posts'));
+    }
 }
 
 
