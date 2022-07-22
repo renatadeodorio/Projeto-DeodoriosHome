@@ -10,13 +10,13 @@
 <body>
     <div class="container w-60 p-3">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="collapse navbar-collapse" id="navbarSuporterContent">
+            <div class="collapse navbar-collapse" id="navbarSuportedContent">
                 <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link text-white" href="/users">Usuários</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/posts">Posts</a>
+                    <a class="nav-link text-white" href="/posts">Postagens</a>
                 </li>
                 </ul>
             </div>
