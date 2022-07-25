@@ -8,6 +8,8 @@ use App\Http\Requests\StoreUpdateUserFormRequest;
 
 class UserController extends Controller
 {
+    protected $model;
+
     public function __construct(User $user)
     {
         $this->model = $user;
@@ -22,12 +24,10 @@ class UserController extends Controller
 
     public function show ($id)
     {
-        if(!$user = User::find($id))
-           return redirect()->route('users.index');
+        if(!$user = User::findOrFail($id))
+          return redirect()->route('users.index');
 
-        $title = 'Usuário'. $user->name;
-
-        return view('users.show', compact('user','title'));
+         return view('users.show', compact('user'));
     }
 
     public function create()
