@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Http\Request;
 use App\Http\Requests\StoreUpdateUserFormRequest;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -15,9 +15,11 @@ class UserController extends Controller
         $this->model = $user;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::paginate(6);
+        $users = $this->model->getUsers(
+            $request->search ?? ''
+        );
 
         return view('users.index', compact('users'));
     }
