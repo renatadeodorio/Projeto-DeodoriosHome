@@ -30,7 +30,7 @@ class StoreUpdateUserFormRequest extends FormRequest
            'email' => [
               'required',
               'email',
-              'unique:users,email,{$id},id',
+              //'unique:users,email,{$id},id',
            ],
            'password' => [
               'required',
