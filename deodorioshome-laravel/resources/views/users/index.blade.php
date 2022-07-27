@@ -2,6 +2,12 @@
 @section('title', 'Listagem de Usuários')
 @section('body')
     <h1>Listagem de Usuários</h1>
+    @if(session()->has('create'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Atenção!</strong> {{ session()->get('create') }}.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  @endif
 
     <div class="container">
         <div class="row">

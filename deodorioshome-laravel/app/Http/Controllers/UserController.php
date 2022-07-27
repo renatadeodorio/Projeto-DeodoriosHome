@@ -52,7 +52,9 @@ class UserController extends Controller
         $this->model->create($data);
 
 
-        return redirect()->route('users.index');
+        //return redirect()->route('users.index');
+        // return session()->flash('create', 'Usuário cadastrado com sucesso!');
+        return redirect()->route('users.index')->with('create', 'Usuário cadastrado com sucesso!');
     }
 
     public function edit($id)
@@ -74,7 +76,10 @@ class UserController extends Controller
 
         $user->update($data);
 
-        return redirect()->route('users.index');
+       // return redirect()->route('users.index');
+      // $request->session()->flash('edit', 'Usuário Atualizado com sucesso!');
+
+       return redirect()->route('users.index')->with('edit', 'Usuário Atualizado com sucesso!');
     }
 
     public function destroy($id)
