@@ -2,7 +2,7 @@
 @section('title','Dashboard')
 @section('body')
 
-<div class="card mt-3" style="width: 28rem;">
+<div class="card mt-3" style="width: 22rem;">
      <img src="{{ asset('storage/profile/dash.jpg') }}" class="card-img-top" alt="Dash">
      <div class="card-body-center">
        <h5 class="card-title">Bem vindo(a) à Deodorio's Home </h5>
