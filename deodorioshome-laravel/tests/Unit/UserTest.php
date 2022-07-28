@@ -10,4 +10,10 @@ class UserTest extends TestCase
     {
         $this->assertTrue(true);
     }
+
+    public function test_create_user()
+    {
+        $this->assertTrue(true);
+    }
+
 }
