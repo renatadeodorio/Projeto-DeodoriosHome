@@ -26,10 +26,15 @@ class UserController extends Controller
 
     public function show ($id)
     {
-        if(!$user = User::findOrFail($id))
-          return redirect()->route('users.index');
+        //if(!$user = User::findOrFail($id))
+          //return redirect()->route('users.index');
+          $user = User::findOrFail($id);
 
-         return view('users.show', compact('user'));
+          if($user) {
+              return view('users.show', compact('user'));
+          }else{
+            throw new UserControllerException('User não encontrado');
+          }
     }
 
     public function create()
