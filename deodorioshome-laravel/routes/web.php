@@ -19,6 +19,8 @@ Route::middleware(['auth'])->group(function() {
 
     Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
     Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
+    Route::get('/quadros/novo', [PostController::class, 'create'])->name('posts.create');
+    Route::post('/quadros', [PostController::class, 'store']);
 
 });
 
