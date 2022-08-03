@@ -6,7 +6,7 @@
 <div class="container">
         <div class="row">
             <div class="col-sm mt-2 mb-5">
-                <a href="{{ route('users.create') }}" class="btn btn-outline-dark">Novo Quadro</a>
+                <a href="{{ route('posts.create') }}" class="btn btn-outline-dark">Novo Quadro</a>
             </div>
             <div class="col-sm mt-2 mb-5">
                 <form action="{{ route('posts.index') }}" method="GET">
@@ -44,7 +44,6 @@
         </tbody>
     </table>
     <div class="justify-content-center pagination">
-        {{ $posts->links('pagination::bootstrap-4') }}
     </div>
 
 
