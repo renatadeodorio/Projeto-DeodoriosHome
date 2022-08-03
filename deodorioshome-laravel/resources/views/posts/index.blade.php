@@ -46,4 +46,4 @@
     <div class="justify-content-center pagination">
     </div>
 
-
+    @endsection

@@ -18,21 +18,24 @@
         <input type="text" class="form-control" id="name" name="name" aria-describedby="Nome">
       </div>
       <div class="mb-3">
-        <label for="email" class="form-label">Descrição</label>
-        <input type="email" class="form-control" id="email" name="email">
+        <label for="text" class="form-label">Descrição</label>
+        <input type="text" class="form-control" id="text" name="text">
       </div>
       <div class="mb-3">
-        <label for="password" class="form-label">Temas</label>
-        <input type="password" class="form-control" id="password" name="password">
+        <label for="text" class="form-label">Temas</label>
+        <input type="text" class="form-control" id="text" name="text">
       </div>
-      <label for="password" class="form-label">Formatos</label>
-        <input type="password" class="form-control" id="password" name="password">
+      <div class="mb-3">
+      <label for="text" class="form-label">Formatos</label>
+        <input type="text" class="form-control" id="text" name="text">
       </div>
-      <label for="password" class="form-label">Tamanhos</label>
-        <input type="password" class="form-control" id="password" name="password">
+      <div class="mb-3">
+      <label for="text" class="form-label">Tamanhos</label>
+        <input type="text" class="form-control" id="text" name="text">
       </div>
-      <label for="password" class="form-label">Preços</label>
-        <input type="password" class="form-control" id="password" name="password">
+      <div class="mb-3">
+      <label for="text" class="form-label">Preços</label>
+        <input type="text" class="form-control" id="text" name="text">
       </div>
       <div class="mb-3">
           <label for="image" class="form-label">Selecione uma Imagem</label>
