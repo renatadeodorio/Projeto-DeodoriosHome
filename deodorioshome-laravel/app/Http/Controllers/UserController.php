@@ -55,7 +55,7 @@ class UserController extends Controller
         }
         $this->model->create($data);
         $request->session()->flash('create', 'Usuário cadastrado com sucesso!');
-        return redirect()->route('users.index');
+        return redirect()->route('users.index')->with('create', 'Usuário cadastrado com sucesso!');
     }
     public function edit($id)
     {
@@ -74,7 +74,7 @@ class UserController extends Controller
         if($request->password)
             $data['password'] = bcrypt($request->password);
 
-            $data['is_admin'] = $request->is_admin ? 1 : 0;
+            $data['is_admin'] = $request->admin ? 1 : 0;
 
         $user->update($data);
 

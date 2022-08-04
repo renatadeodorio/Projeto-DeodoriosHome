@@ -62,6 +62,6 @@
         </tbody>
     </table>
     <div class="justify-content-center pagination">
+        {{ $posts->links('pagination::bootstrap-4') }}
     </div>
-
-    @endsection
+@endsection
