@@ -43,7 +43,7 @@
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>
-                        <a href="{{ route('posts.show', $user->id) }}" class="btn btn-outline-dark">Postagens - {{ $user->posts->count() }}</a>
+                        <a href="{{ route('posts.index', $user->id) }}" class="btn btn-outline-dark">Pedidos - {{ $user->posts->count() }}</a>
 
                     </td>
                     <td>{{ date('d/m/Y - H:i', strtotime($user->created_at)) }}</td>

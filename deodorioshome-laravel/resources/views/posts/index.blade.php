@@ -30,16 +30,34 @@
             <th scope="col">Tamanhos</th>
             <th scope="col">Artistas</th>
             <th scope="col">Preços</th>
+            <th scope="col">Ações</th>
             </tr>
         </thead>
         <tbody class="text-center">
             @foreach($posts as $post)
                 <tr>
-                    @if($post->image)
-                        <th><img src=" {{ asset('storage/'.$post->image) }}" width="50px" height="50px" class="rounded-square"/></th>
+                  <td>{{ $post->id }}</td>
+
+                  @if($post->quadros)
+                        <th><img src=" {{ asset('storage/'.$post->quadros) }}" width="150px" class="rounded-square"/></th>
                     @else
-                        <th><img src=" {{ asset('storage/profile/dash.jpg') }}" width="50px" height="50px" class="rounded-square"/></th>
+                        <th><img src=" {{ asset('storage/profile/dash.jpg') }}" width="150px" class="rounded-square"/></th>
                     @endif
+                  <td>{{ $post->descricao }}</td>
+                  <td>{{ $post->temas}}</td>
+                  <td>{{ $post->formatos }}</td>
+                  <td>{{ $post->tamanhos }}</td>
+                  <td>{{ $post->artistas }}</td>
+                  <td>{{ $post->precos }}</td>
+                  <td>
+              <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
+               @method('DELETE')
+               @csrf
+               <button type="submit" class="btn btn-danger text-white">Deletar</button>
+            </form>
+           </td>
+
+                </tr>
             @endforeach
         </tbody>
     </table>

@@ -20,7 +20,7 @@
                                     <a class="nav-link text-white" href="/users">Usuários</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="/posts">Posts</a>
+                                    <a class="nav-link text-white" href="/posts">Quadros</a>
                                 </li>
                             </ul>
                         </div>
@@ -39,14 +39,14 @@
                                                 {{ __('Sair') }}
                                             </x-responsive-nav-link>
                                         </form>
-                                    </li>                        
+                                    </li>
                                 @else
                                     <li class="nav-item">
                                         <a class="nav-link text-white" href="{{ route('login') }}">Entrar</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link text-white" href="{{ route('register') }}">Registrar-se</a>
-                                    </li>   
+                                    </li>
                                 @endif
                             </ul>
                         </div>
@@ -55,6 +55,6 @@
             </div>
         </nav>
         @yield('body')
-    </div>    
+    </div>
 </body>
 </html>
