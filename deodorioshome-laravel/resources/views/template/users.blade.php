@@ -45,7 +45,7 @@
                                         <a class="nav-link text-white" href="{{ route('login') }}">Entrar</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" href="{{ route('register') }}">Registrar-se</a>
+                                        <a class="nav-link text-white" href="{{ route('register') }}">Registro</a>
                                     </li>
                                 @endif
                             </ul>
