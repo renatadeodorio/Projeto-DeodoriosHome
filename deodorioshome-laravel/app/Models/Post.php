@@ -9,14 +9,15 @@ class Post extends Model
 {
     use HasFactory;
     protected $fillable = [
-     'Id',
-     'Quadros',
-     'Descrição',
-     'Temas',
-     'Formatos',
-     'Tamanhos',
-     'Artistas',
-     'Preços'
+     'id',
+     'quadros',
+     'descricao',
+     'temas',
+     'formatos',
+     'tamanhos',
+     'artistas',
+     'precos',
+     'user_id'
     ];
 
     public function getPosts(string $search = null)
