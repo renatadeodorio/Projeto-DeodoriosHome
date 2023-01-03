@@ -3,8 +3,6 @@
 
 <h1> ° Projeto individual BeAcademy/PayLivre </h1
 
-Mentor: José Lira
-
 ⇨ CRUD em PHP, utilizando Laravel com sistema de autenticação,
 banco de dados Mysql (tabela com 10 atributos), métodos Insert,
 Update, Delete e Read na tabela.
